@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>نظام التصويت</title>
+<style>
+  body { font-family: Tahoma; text-align: center; background: #f4f4f4; }
+  .box {
+    background: white; width: 300px; margin: 20px auto; padding: 15px;
+    border-radius: 10px; box-shadow: 0 0 10px #ccc;
+  }
+  img { width: 100%; border-radius: 10px; }
+  button {
+    background: #1a73e8; color: white; padding: 10px; border: none;
+    border-radius: 5px; margin-top: 10px; width: 100%; font-size: 18px;
+  }
+</style>
+</head>
+<body>
+
+<h2>صوّت للشخص المفضل لديك</h2>
+
+<div class="box">
+  <h3>رقية</h3>
+  <img src="https://imgur.com/a/pWAHyHd">
+  <p>الأصوات: <span id="v1">0</span></p>
+  <button onclick="vote(1)">صوّت</button>
+</div>
+
+<div class="box">
+  <h3>محمد</h3>
+  <img src="https://imgur.com/a/4hBmYnc">
+  <p>الأصوات: <span id="v2">0</span></p>
+  <button onclick="vote(2)">صوّت</button>
+</div>
+
+<script>
+let v1 = 0, v2 = 0;
+
+function vote(id) {
+  if(id === 1){ v1++; document.getElementById("v1").innerText = v1; }
+  if(id === 2){ v2++; document.getElementById("v2").innerText = v2; }
+}
+</script>
+
+</body>
+</html>
